@@ -1,0 +1,78 @@
+// Prefixes and corresponding values
+// -0  0px
+// -1  4px
+// -2  8px
+// -3  16px
+// -4  24px
+// -5  48px
+// -6  80px
+// -7  112px
+// -8  144px
+
+$spacer: 1rem; //16px
+
+.p-0 {
+    padding: 0;
+}
+
+.p-3 {
+    padding: $spacer;
+}
+
+.px-3 {
+    padding-left: $spacer;
+    padding-right: $spacer;
+}
+
+.py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.py-3 {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+}
+
+.py-5 {
+    padding-top: calc($spacer * 3);
+    padding-bottom: calc($spacer * 3);
+}
+
+.py-6 {
+    padding-top: calc($spacer * 5);
+    padding-bottom: calc($spacer * 5);
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.m-3 {
+    margin: $spacer;
+}
+
+.my-2 {
+    margin-top: calc($spacer / 2);
+    margin-bottom: calc($spacer / 2);
+}
+
+.my-3 {
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+}
+
+.my-4 {
+    margin-top: calc($spacer * 1.5);
+    margin-bottom: calc($spacer * 1.5);
+}
+
+.my-5 {
+    margin-top: calc($spacer * 3);
+    margin-bottom: calc($spacer * 3);
+}
+
+.my-8 {
+    margin-top: calc($spacer * 9);
+    margin-bottom: calc($spacer * 9);
+}

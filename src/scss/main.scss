@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300..800&display=swap');
+
+$color-white: white;
+$color-orange: #f7600e;
+$color-light-orange: #f37e21;
+$color-light-gray: rgba(255, 255, 255, 0.2);
+$color-dark-gray: rgba(59, 67, 76, 0.3);
+
+$main-text-color: #3b434c;
+
+$screen-small: 300px;
+$screen-medium: 900px;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: $main-text-color;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p{
+    text-align: center;
+}
+
+input,
+textarea {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    border: 1px solid rgba(59, 67, 76, .3);
+    resize: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.text-orange {
+    color: $color-orange;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid $color-light-gray;
+    border-radius: 10px;
+    min-width: 210px;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover {
+        background-color: $color-orange;
+        border-color: transparent;
+    }
+
+    &-primary {
+        border-color: $color-orange;
+        color: $color-white;
+        background-color: $color-orange;
+
+        &:hover {
+            background-color: $color-light-orange;
+        }
+    }
+
+    &-primary-neg {
+        border-color: $color-white;
+        color: $color-white;
+        background-color: $color-orange;
+
+        &:hover {
+            color: $color-orange;
+            background-color: $color-white;
+        }
+    }
+
+    &-secondary {
+        color: $main-text-color;
+        border: 1px solid $color-dark-gray;
+
+        &:hover {
+            color: $color-white;
+            background-color: $main-text-color;
+        }
+    }
+
+    &-secondary-neg {
+        color: $color-white;
+        border: 1px solid $color-light-gray;
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-light-gray;
+        }
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+br {
+    @media screen and (max-width: $screen-medium) {
+        display: none;
+    }
+}
+
+.header,
+.newsletter,
+.contacts {
+    background-size: cover;
+}
+
+.header {
+    background-color: #333;
+    color: $color-white;
+    text-align: center;
+
+    &__menu-button {
+        cursor: pointer;
+    }
+
+    &__title {
+        margin-top: 160px;
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        font-size: 25px;
+        line-height: 40px;
+        font-weight: 400;
+        margin-top: 0px;
+        margin-bottom: 45px;
+    }
+
+    &__scroll-down {
+        margin-top: 150px;
+    }
+
+    &__menu-popup,
+    &__contacts-popup {
+        background-color: rgba(59, 67, 76, 0.95);
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+
+        &-content {
+            max-width: 765px;
+        }
+
+        &-close {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+    }
+
+    &__menu-popup {
+        &-container {
+            position: relative;
+        }
+
+        &-items {
+            li {
+                list-style: none;
+                margin-bottom: 40px;
+            }
+
+            a {
+                font-size: 35px;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-white;
+                transition: color 0.2s ease-in;
+
+                &:hover {
+                    color: $color-orange;
+                }
+            }
+        }
+
+        &-devider {
+            background-color: $color-orange;
+            width: 170px;
+            height: 2px;
+        }
+
+        &-close {
+            top: 30px;
+            right: 15px;
+        }
+
+        &-socials a {
+            margin: 40px 10px 0px 10px;
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__contacts-popup {
+        &-content {
+            background-color: $color-white;
+            position: relative;
+            color: $main-text-color;
+        }
+
+        &-close {
+            top: -25px;
+            right: -25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $main-text-color;
+        }
+    }
+}
+
+.services {
+    &__card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__image {
+        width: 150px;
+        height: 150px;
+        border: 1px solid $color-dark-gray;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
+
+.newsletter {
+    background-color: #333;
+    color: $color-white;
+}
+
+.works {
+    &__description {
+        line-height: 30px;
+    }
+
+    &__grid {
+        margin: 0 -1rem;
+    }
+
+    &__card {
+        position: relative;
+        border-radius: 10px;
+        display: block;
+    }
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-orange;
+        opacity: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.2s ease-in;
+        border-radius: inherit;
+        color: $color-white;
+    }
+
+    &__card:hover &__overlay {
+        opacity: 0.9;
+    }
+
+    &__overlay-title {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    &__overlay-description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+    }
+}
+
+.contacts {
+    background-color: #333;
+    color: $color-white;
+
+    &__description {
+        line-height: 30px;
+    }
+
+    &__buttons {
+        box-sizing: border-box;
+    }
+
+    &__socials {
+        margin-right: -10px;
+
+        a {
+            padding: 10px;
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #3b434c;
+    color: #fff;
+    padding-bottom: 35px;
+
+    &__text {
+        text-transform: uppercase;
+    }
+}
+.footer__text {
+    text-align: left;
+}
